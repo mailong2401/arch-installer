@@ -181,29 +181,9 @@ class CursesUI:
         return key not in [27]  # Not ESC
     
     def show_package_installation(self, packages):
-        """Initialize package installation display"""
+        """Simple wrapper to show package installation start"""
         self.stdscr.clear()
-        self.stdscr.addstr(0, 2, "INSTALLING PACKAGES...", curses.A_BOLD)
-        
-        h, w = self.stdscr.getmaxyx()
-        self.left_col_w = 30
-        self.right_col_w = w - self.left_col_w - 2
-        
-        # Draw separator
-        for i in range(h-1):
-            try:
-                self.stdscr.addstr(i, self.left_col_w + 2, "│")
-            except curses.error:
-                pass
-        
-        # Show package names
-        for i, pkg in enumerate(packages):
-            if i + 2 < h-1:
-                try:
-                    self.stdscr.addstr(i+2, 2, pkg[:self.left_col_w-2])
-                except curses.error:
-                    pass
-        
+        self.stdscr.addstr(0, 2, "PREPARING PACKAGE INSTALLATION...", curses.A_BOLD)
         self.stdscr.refresh()
     
     def update_package_status(self, package, status):
