@@ -16,8 +16,12 @@ class PackageManager:
     @staticmethod
     def get_package_list(kernel, gpu, wmde):
         """Build package list based on configuration"""
-        pkgs = ["base", kernel, f"{kernel}-headers", "networkmanager", "sudo","linux-firmware"]
-        
+        pkgs = ["base", "networkmanager", "sudo", "linux-firmware","nvim"]
+
+        # Kernel
+        if kernel and kernel != "None":
+            pkgs += [kernel, f"{kernel}-headers"]
+
         # GPU drivers
         if gpu == "nvidia":
             pkgs += ["nvidia-dkms", "nvidia-utils", "nvidia-settings"]
@@ -25,17 +29,17 @@ class PackageManager:
             pkgs += ["xf86-video-amdgpu", "mesa", "vulkan-radeon"]
         elif gpu == "intel":
             pkgs += ["mesa", "vulkan-intel", "xf86-video-intel"]
-        
+
         # WM/DE packages
         if wmde == "bspwm":
-            pkgs += ["bspwm", "sxhkd", "alacritty", "polybar", "xorg", "xorg-xinit"]
+            pkgs += ["bspwm", "sxhkd", "alacritty", "polybar", "xorg-server", "xorg-xinit","qutebrowser","rofi","feh","ranger","brightnessctl","zsh","xclip"]
         elif wmde == "hyprland":
-            pkgs += ["hyprland", "waybar", "alacritty", "xdg-desktop-portal-hyprland"]
+            pkgs += ["hyprland", "kitty", "xdg-desktop-portal-hyprland"]
         elif wmde == "gnome":
             pkgs += ["gnome", "gdm"]
         elif wmde == "kde":
             pkgs += ["plasma", "sddm", "konsole"]
-        
+
         return pkgs
     
     def install_base_packages(self, ui, kernel, gpu, wmde):

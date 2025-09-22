@@ -73,10 +73,10 @@ class Installer:
         self.config['rootpass'] = self.ui.input("Enter root password:", self.config, "Root Password", hidden=True)
 
         # System configuration
-        self.config['kernel'] = self.ui.menu("Select Kernel", ["linux", "linux-lts", "linux-zen"], self.config, "Kernel")
-        self.config['gpu'] = self.ui.menu("Select GPU Driver", ["intel", "amd", "nvidia"], self.config, "GPU")
-        self.config['wmde'] = self.ui.menu("Select WM/DE", ["bspwm", "hyprland", "gnome", "kde"], self.config, "WM/DE")
-        self.config['bootloader'] = self.ui.menu("Select Bootloader", ["systemd-boot", "grub"], self.config, "Bootloader")
+        self.config['kernel'] = self.ui.menu("Select Kernel", ["linux", "linux-lts", "linux-zen","None"], self.config, "Kernel")
+        self.config['gpu'] = self.ui.menu("Select GPU Driver", ["intel", "amd", "nvidia","None"], self.config, "GPU")
+        self.config['wmde'] = self.ui.menu("Select WM/DE", ["hyprland","bspwm",  "gnome", "kde","None"], self.config, "WM/DE")
+        self.config['bootloader'] = self.ui.menu("Select Bootloader", ["systemd-boot", "grub","None"], self.config, "Bootloader")
 
         # Swap configuration
         swap_choice = self.ui.menu("Create swap file?", ["Yes", "No"], self.config, "Swap file")
