@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: arch-installer
+Version: 1.0.0
+Summary: Arch Linux installer with curses interface
+Author-email: Mai Duong Long <gtmailong@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Arch Linux Installer
+
+Công cụ cài đặt Arch Linux với giao diện curses.
+
+## Cài đặt
+
+```bash
+pip install .
