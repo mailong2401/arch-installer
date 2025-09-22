@@ -1,2 +1,0 @@
-[console_scripts]
-arch-installer = arch_installer.__main__:main
