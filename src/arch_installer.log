@@ -1,0 +1,12 @@
+2025-09-22 18:38:41,892 [INFO] Arch Installer started
+2025-09-22 18:38:41,892 [INFO] Running interactive installer
+2025-09-22 18:38:41,894 [INFO] Starting installation process
+2025-09-22 18:38:41,894 [INFO] Validating preconditions (root, UEFI)
+2025-09-22 18:38:41,894 [INFO] Unmounting target disk if mounted
+2025-09-22 18:38:41,894 [INFO] Partitioning disk and creating filesystems
+2025-09-22 18:38:41,894 [INFO] Mounting filesystems
+2025-09-22 18:38:41,894 [INFO] Optimizing mirrorlist
+2025-09-22 18:38:41,894 [INFO] Installing base packages with pacstrap
+2025-09-22 18:38:41,894 [INFO] Running: pacstrap /mnt base linux linux-firmware vim networkmanager mesa xf86-video-intel gnome gdm
+2025-09-22 18:38:41,894 [ERROR] Installation failed: [Errno 2] No such file or directory: 'pacstrap'
+2025-09-22 18:38:41,898 [INFO] Cleaning up after error (unmount, rollback)
