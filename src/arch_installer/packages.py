@@ -16,7 +16,7 @@ class PackageManager:
     @staticmethod
     def get_package_list(kernel, gpu, wmde):
         """Build package list based on configuration"""
-        pkgs = ["base", kernel, f"{kernel}-headers", "networkmanager", "sudo"]
+        pkgs = ["base", kernel, f"{kernel}-headers", "networkmanager", "sudo","linux-firmware"]
         
         # GPU drivers
         if gpu == "nvidia":
