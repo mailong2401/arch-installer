@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arch-installer"
+version = "1.0.0"
+description = "Arch Linux Installer with Curses UI"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+arch-installer = "arch_installer.__main__:main"
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/arch-installer"
+"Bug Tracker" = "https://github.com/yourusername/arch-installer/issues"

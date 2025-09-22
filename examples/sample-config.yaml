@@ -1,0 +1,16 @@
+# Sample configuration for unattended installation
+disk: "/dev/sda"
+username: "archuser"
+userpass: "password123"
+rootpass: "rootpassword123"
+kernel: "linux"
+gpu: "intel"
+wmde: "gnome"
+bootloader: "systemd-boot"
+use_swap: true
+locale:
+  locale: "en_US.UTF-8"
+  lang: "en_US.UTF-8"
+  time_format: "en_US.UTF-8"
+  number_format: "en_US.UTF-8"
+  currency_format: "en_US.UTF-8"
